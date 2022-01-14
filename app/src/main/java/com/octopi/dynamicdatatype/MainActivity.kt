@@ -8,6 +8,7 @@ import com.google.gson.Gson
 class MainActivity : AppCompatActivity() {
 
     var TAG = "MainAct"
+    var isClear = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate: int value: $intValue")
         Log.d(TAG, "onCreate: objectOne value: ${Gson().toJson(objectOne)}")
         Log.d(TAG, "onCreate: ObjectTwo value: ${Gson().toJson(objectTwo)}")
+
+        if (isClear) clearPref()
 
     }
 }
